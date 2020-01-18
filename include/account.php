@@ -1,17 +1,25 @@
 <?php
 
-class Account {
 
-    public function getAllUsernames(){
-        $sql = " select username from login_credentials";
-        $connMgr = new ConnectionManager();      
-        $conn = $connMgr->getConnection();
+class Account{
 
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
+    private $username;
+    private $password; 
+
+    public function __construct($username='',$password='')
+    {
+        $this->username = $username;
+        $this->password = $password; 
     }
 
+    public function getUsername(){
+        return $this->getUsername;
+    }
+
+    public function getPassword(){
+        return $this->getPassword;
+    }
+
+
+
 }
-
-
-?>
