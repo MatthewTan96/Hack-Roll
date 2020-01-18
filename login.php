@@ -30,14 +30,16 @@ Welcome to our sick ass game
 
 
 <form action="register.php" method="post">
-<label for="username"><b>Username:</b></label>
-<input type="text" placeholder="Enter Username" name="username" required>
 
-<br>
-<br>
+<!-- Username  -->
+<label for="username">Username:</label>
+<input type="username" placeholder='Enter Username' name="username" id="username">
 
-<label for="password"><b>Password:  </b></label>
-<input type="password" placeholder="Enter Password" name="password" required>
+<!-- Password -->
+<br><br>     
+
+<label for="password">Password:</label>
+<input type="password" placeholder='Enter Password' class="password" name="password" id="password">
 
 <br>
 <button type="submit">Register</button>
