@@ -30,8 +30,8 @@
 
     $AccountDAO->register($username,$password);
     
-    $_SESSION('username') = $username;
-    $_SESSION('password') = $password;
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
 
     header('Location: home.php');
 

@@ -53,7 +53,7 @@ Welcome to NeuroParasite
 <button type="submit">Register</button>
 </form>
 
-<h2> Errors </h2>
+<h2> Errors (if any): </h2>
 <?php
 
 
@@ -61,6 +61,9 @@ if (isset($_SESSION["errors"])){
 
     echo "<p> {$_SESSION['errors']} </p>";
 
+}
+else{
+    echo "No error!";
 }
 ?>
 

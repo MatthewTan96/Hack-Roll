@@ -19,8 +19,8 @@ class AccountDAO {
     }
     
     public function register($username,$password){
-        $sql = 'INSERT INTO login_credentials(username,password), 
-        VALUES ($username,$password)';
+        $sql = 'INSERT INTO login_credentials(username,password) 
+        VALUES (:username,:password)';
 
         $connMgr = new ConnectionManager();
         $conn = $connMgr->getConnection();
