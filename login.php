@@ -5,7 +5,7 @@
 
 ?>
 
-Welcome to our sick ass game 
+Welcome to NeuroParasite 
 
 
 <br>
