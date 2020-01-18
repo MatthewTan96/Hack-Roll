@@ -3,7 +3,7 @@
 class AccountDAO {
 
     public function getAllUsernames(){
-        $sql = " select * from login_credentials";
+        $sql = " select username from login_credentials";
         $connMgr = new ConnectionManager();      
         $conn = $connMgr->getConnection();
 
@@ -13,7 +13,7 @@ class AccountDAO {
         $result = [];
 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-            $result[] = new Account($row['username'],$row['password']);
+            $result[] =$row['username'];
         }
         return $result;
     }
