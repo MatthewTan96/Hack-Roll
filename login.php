@@ -1,4 +1,12 @@
+
+<?php
+
+    require_once'include/common.php';
+
+?>
+
 Welcome to our sick ass game 
+
 
 <br>
 <br>
@@ -41,8 +49,20 @@ Welcome to our sick ass game
 <label for="password">Password:</label>
 <input type="password" placeholder='Enter Password' class="password" name="password" id="password">
 
-<br>
+<br><br>
 <button type="submit">Register</button>
 </form>
+
+<h2> Errors </h2>
+<?php
+
+
+if (isset($_SESSION["errors"])){
+
+    echo "<p> {$_SESSION['errors']} </p>";
+
+}
+?>
+
 
 </body>
