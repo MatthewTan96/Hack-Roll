@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 18, 2020 at 06:04 AM
+-- Generation Time: Jan 18, 2020 at 08:54 AM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `character_info`;
 CREATE TABLE IF NOT EXISTS `character_info` (
-  `user_id` int(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
   `character_name` varchar(20) NOT NULL,
   `class` text NOT NULL,
   `hp` int(11) NOT NULL,
@@ -47,11 +47,18 @@ CREATE TABLE IF NOT EXISTS `character_info` (
 
 DROP TABLE IF EXISTS `login_credentials`;
 CREATE TABLE IF NOT EXISTS `login_credentials` (
-  `user_id` int(100) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
-  PRIMARY KEY (`user_id`)
+  PRIMARY KEY (`username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login_credentials`
+--
+
+INSERT INTO `login_credentials` (`username`, `password`) VALUES
+('DaEunSucks', 'ABC123'),
+('matthewtan96', 'matthewtan96');
 
 -- --------------------------------------------------------
 
@@ -61,13 +68,13 @@ CREATE TABLE IF NOT EXISTS `login_credentials` (
 
 DROP TABLE IF EXISTS `weapon_info`;
 CREATE TABLE IF NOT EXISTS `weapon_info` (
-  `user_id` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
   `weapon_id` int(11) NOT NULL,
   `name` int(11) NOT NULL,
   `type` int(11) NOT NULL,
   `damage` int(11) NOT NULL,
   `durability` int(11) NOT NULL,
-  PRIMARY KEY (`user_id`,`weapon_id`)
+  PRIMARY KEY (`username`,`weapon_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
 
