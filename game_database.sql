@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 18, 2020 at 04:59 AM
+-- Generation Time: Jan 18, 2020 at 06:04 AM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -32,6 +32,7 @@ DROP TABLE IF EXISTS `character_info`;
 CREATE TABLE IF NOT EXISTS `character_info` (
   `user_id` int(100) NOT NULL,
   `character_name` varchar(20) NOT NULL,
+  `class` text NOT NULL,
   `hp` int(11) NOT NULL,
   `mana` int(11) NOT NULL,
   `strength` int(11) NOT NULL,

@@ -43,8 +43,4 @@ Welcome to our sick ass game
 <button type="submit">Register</button>
 </form>
 
-
-
-<label>
-</form>
 </body>
